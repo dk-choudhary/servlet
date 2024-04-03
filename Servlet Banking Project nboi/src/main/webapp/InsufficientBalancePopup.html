@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Message</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function() {
+            // Show pop-up message
+            alert("You have insufficient balance !!!");
+
+            // Redirect to home page after 2 seconds
+            setTimeout(function() {
+                window.location.href = "login";
+            }, 20); // 2000 milliseconds = 2 seconds
+        };
+    </script>
+</body>
+</html>

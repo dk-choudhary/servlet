@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>National Bank Of India</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .panel {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 30px; /* Increased padding */
+    width: 350px; /* Increased width */
+  }
+  .panel-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Increased margin */
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 20px; /* Increased margin */
+  }
+  label {
+    display: inline-block; /* Changed from block to inline-block */
+    margin-bottom: 5px; /* Decreased margin */
+    margin-right: 10px; /* Added margin between radio button and label */
+    color:#007bff;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    width: calc(100% - 20px); /* Adjusted width to accommodate margin */
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Decreased margin */
+  }
+  input[type="radio"] {
+    width: 20px; /* Adjusted width to accommodate margin */
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Decreased margin */
+  }
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .radio-group {
+    display: flex;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div class="panel">
+  <div class="panel-heading">
+    NBOI - Login Page
+  </div>
+  <form action="login" method="post">
+    <div class="form-group radio-group">
+      <input type="radio" name="usertype" value="Customer"> <label>Customer</label>
+      <input type="radio" name="usertype" value="Employee"> <label>Bank Employee</label>
+    </div>
+    <div class="form-group">
+      <input type="text" name="user" placeholder="User Name" required="required">
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" placeholder="Password" required="required">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Login">
+    </div>
+    <label>Open New Account?<a href="NewAccount.html"> click</a></label>
+    <label>Check your application stutas?<a href="CheckApplicationStatus.html"> check</a></label>
+  </form>
+</div>
+</body>
+</html>

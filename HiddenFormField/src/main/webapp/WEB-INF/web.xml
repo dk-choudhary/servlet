@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>HiddenFormField</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>first</servlet-name>
+		<servlet-class>com.hidden.Servlet1</servlet-class>
+
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/Servlet11</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Second</servlet-name>
+		<servlet-class>com.hidden.Servlet2</servlet-class>
+
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Second</servlet-name>
+		<url-pattern>/Servlet22</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>three</servlet-name>
+		<servlet-class>com.hidden.Servlet3</servlet-class>
+
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>three</servlet-name>
+		<url-pattern>/Servlet33</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>four</servlet-name>
+		<servlet-class>com.hidden.Servlet4</servlet-class>
+
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>four</servlet-name>
+		<url-pattern>/Servlet44</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>

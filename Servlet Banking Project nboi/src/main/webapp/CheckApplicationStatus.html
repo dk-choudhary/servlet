@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBOI</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], [type="button"] {
+    width: calc(49% - 5px); /* Adjusted width */
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    color: #f0f0f0;
+    background-color: darkcyan;
+    display: inline-block; /* Display inline to show on the same line */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+[type="button"] {
+    margin-left: 10px; /* Adjusted margin between buttons */
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Check Application Status</h2>
+        <form action="checkRequestStatus" method="post">
+            <label for="tempAcNumber">Temporary Account Number:</label> <input
+                type="text" id="tempAcNumber" name="tempAcNumber"
+                pattern="[0-9]{11}" required> <label for="dob">Date
+                of Birth:</label> <input type="date" id="dob" name="dob" required> <label
+                for="password">Password:</label> <input type="password"
+                id="password" name="password" required> <input type="submit"
+                value="Check Status"> <input type="button" value="Back"
+                onclick="openNewPage()">
+        </form>
+    </div>
+    <script>
+    function openNewPage() {
+        window.location.href = "BankLoginPage.html";
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+color:#007bff;
+  }
+ h3 {
+    text-align: left;
+    margin-bottom: 20px;
+color:brown;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Align items vertically */
+  }
+  label {
+    width: calc(50% - 5px);
+    margin-bottom: 2px;
+    font-weight: bold;
+  }
+  input[type="text"] {
+    width: calc(50% - 5px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  input[type="submit"] {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .permanent-address {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .checkbox-label {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>NBOI Bank Address Form</h2>
+  <h3>Present Address:-</h3>
+  <form action="newcustAddress" method="post">
+    <div class="form-group">
+      <label for="presentWardNo">Ward No/Street:</label>
+      <input type="text" id="presentWardNo" name="presentWardNo">
+      <label for="presentColony">Colony:</label>
+      <input type="text" id="presentColony" name="presentColony" required>
+      <label for="presentVillage">Village:</label>
+      <input type="text" id="presentVillage" name="presentVillage" required>
+      <label for="presentBlock">Block:</label>
+      <input type="text" id="presentBlock" name="presentBlock" required>
+      <label for="presentCity">City:</label>
+      <input type="text" id="presentCity" name="presentCity" required>
+      <label for="presentDistrict">District:</label>
+      <input type="text" id="presentDistrict" name="presentDistrict" required>
+      <label for="presentState">State:</label>
+      <input type="text" id="presentState" name="presentState" required>
+      <label for="presentPincode">Pincode:</label>
+      <input type="text" id="presentPincode" name="presentPincode" required>
+    </div>
+    <div class="form-group">
+      <input type="checkbox" id="sameAddress" name="sameAddress" onchange="togglePermanentAddress()">
+      <label class="checkbox-label" for="sameAddress">Permanent address same as present address</label>
+    </div>
+    <div class="form-group permanent-address">
+      <label for="permanentWardNo">Ward No/Street:</label>
+      <input type="text" id="permanentWardNo" name="permanentWardNo">
+      <label for="permanentColony">Colony:</label>
+      <input type="text" id="permanentColony" name="permanentColony">
+      <label for="permanentVillage">Village:</label>
+      <input type="text" id="permanentVillage" name="permanentVillage">
+      <label for="permanentBlock">Block:</label>
+      <input type="text" id="permanentBlock" name="permanentBlock">
+      <label for="permanentCity">City:</label>
+      <input type="text" id="permanentCity" name="permanentCity">
+      <label for="permanentDistrict">District:</label>
+      <input type="text" id="permanentDistrict" name="permanentDistrict">
+      <label for="permanentState">State:</label>
+      <input type="text" id="permanentState" name="permanentState">
+      <label for="permanentPincode">Pincode:</label>
+      <input type="text" id="permanentPincode" name="permanentPincode">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Save & Next">
+    </div>
+  </form>
+</div>
+
+<script>
+function togglePermanentAddress() {
+  var checkBox = document.getElementById("sameAddress");
+  var permanentAddress = document.querySelector(".permanent-address");
+
+  if (checkBox.checked) {
+    permanentAddress.style.display = "none";
+  } else {
+    permanentAddress.style.display = "flex";
+  }
+}
+</script>
+
+</body>
+</html>

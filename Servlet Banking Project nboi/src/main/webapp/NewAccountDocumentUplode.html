@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Customer Document Upload</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  label {
+    width: 30%;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  input[type="file"] {
+    width: 50%;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    display: block;
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>NBOI Customer Document Upload</h2>
+  <form action="uploadDocument" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="aadharCard">Aadhar Card:</label>
+      <input type="file" id="aadharCard" name="aadharCard" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <label for="panCard">PAN Card:</label>
+      <input type="file" id="panCard" name="panCard" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <label for="addressProof">Address Proof:</label>
+      <input type="file" id="addressProof" name="addressProof" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <label for="photo">Passport Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <label for="signature">Signature:</label>
+      <input type="file" id="signature" name="signature" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit Documents">
+    </div>
+  </form>
+</div>
+</body>
+</html>

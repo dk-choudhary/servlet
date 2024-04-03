@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end; /* Align items to the bottom */
+        }
+
+        #user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        #user-info p {
+            margin-right: 10px;
+        }
+
+        #user-info button {
+            padding: 8px 12px; /* Adjusted padding */
+            background-color: #4CAF50; /* Changed button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #user-info button:hover {
+            background-color: #45a049; /* Hover color */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 60px; /* Adjusted for footer */
+        }
+
+        #options {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            font-size: 18px; /* Increased font size */
+        }
+
+        #options h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        #options ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #options ul li {
+            margin-bottom: 10px;
+        }
+
+        #options ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            background-color: #ccc;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        #options ul li a:hover {
+            background-color: #999;
+            color: #fff;
+        }
+
+        #fund-transfer-form {
+            flex: 2;
+            padding: 20px;
+            width: 300px; /* Adjusted width */
+            padding-left: 10%;
+        }
+
+        #fund-transfer-form h2 {
+            margin-bottom: 20px;
+            padding-left: 200px;
+        }
+
+        #fund-transfer-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold; /* Added font weight */
+        }
+
+        #fund-transfer-form select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 40px; /* Increased height */
+        }
+
+        #fund-transfer-form input[type="text"],
+        #fund-transfer-form input[type="number"],
+        #fund-transfer-form input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 40px; /* Increased height */
+        }
+
+        #fund-transfer-form input[type="submit"] {
+            background-color: #4CAF50; /* Changed button color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #fund-transfer-form input[type="submit"]:hover {
+            background-color: #45a049; /* Hover color */
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>National Bank Of India</h1>
+    <div id="user-info">
+        <p>Welcome Ji</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<div id="container">
+    <div id="options">
+        <h2>Our Services</h2>
+        <ul>
+            <li><a href="personalDetails">Personal Details</a></li>
+            <li><a href="downlodeTransHistory">Transaction History Download</a></li>
+            <li><a href="fundtransction">Fund Transfer</a></li>
+            <li><a href="atmWithdrawal">ATM Withdrawal</a></li>
+            <li><a href="applyLoan">Apply For Loan</a></li>
+            <li><a href="billpayment">Bill Payment</a></li>
+        </ul>
+    </div>
+    <div id="fund-transfer-form">
+        <h2>Fund Transfer</h2>
+        <form action="loanApplicationAction" method="post">
+            <label for="loanType">Loan Type:</label>
+            <select name="loanType">
+                <option value="Car Loan">Car Loan</option>
+                <option value="Bike Loan">Bike Loan</option>
+                <option value="Personal Loan">Personal Loan</option>
+                <option value="Home Loan">Home Loan</option>
+            </select><br>
+            <label for="duration">Duration in Years:</label>
+            <select name="duration">
+                <option value="1">1 year</option>
+                <option value="2">2 year</option>
+                <option value="3">3 year</option>
+                <option value="4">4 year</option>
+                <option value="5">5 year</option>
+                <option value="6">6 year</option>
+            </select><br>
+            <label for="loanAmount">Loan Amount:</label>
+            <input type="text" name="loanAmount" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Bank Website. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function logout() {
+        window.location.href = "logout";
+    }
+</script>
+</body>
+
+</html>

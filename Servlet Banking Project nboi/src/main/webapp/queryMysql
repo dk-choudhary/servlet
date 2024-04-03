@@ -1,0 +1,44 @@
+address table:-
+create table customer_address(temp_ac_num bigint primary Key,ac_number bigint,Persent_address varchar(300),Parmanent_address varchar(300));
+document upload:-
+create table customer_document(temp_ac_num bigint primary Key,ac_number bigint,aadhar_card varchar(100),pan_card varchar(100),address_prof varchar(100),photo varchar(100),signature varchar(100));
+
+customer Basic deatils table:-
+CREATE TABLE Customer_basic_deatils (
+    temp_ac_num BIGINT AUTO_INCREMENT PRIMARY KEY,
+    ac_number BIGINT,
+    name VARCHAR(30),
+    father_name VARCHAR(30),
+    mother_name VARCHAR(30),
+    dob VARCHAR(10),
+    email VARCHAR(30),
+    mobile VARCHAR(10),
+    aadhar VARCHAR(12),
+    pan_card VARCHAR(20),
+    ac_type VARCHAR(20),
+    stutas boolean,
+    password varchar(30),
+    user_id varchar(30),
+    current_balance long,
+    task_panding int
+);
+Employee table:-
+create table bank_emp (emp_id varchar(16),Name varchar(30),gender varchar(6),mobile varchar(10),email varchar(30),password varchar(30),post int);
+
+query:-
+insert into bank_emp values('nboi2024011','rajesh choudhary','male','9887956020','rajeshchoudhary@gmail.com','1234567',2);
+
+
+
+
+
+Transction table:-
+create table transction(ac_number long, credit long,debit long,from_ac long,to_ac long,balance long,transaction_date timestamp default current_timestamp);
+
+customer_loan Table:-
+create table customer_loan(ac_number bigint ,loan_ac_number bigint auto_increment primary key,loan_amount int,duration int,emi int,remining_amount int,remining_emi int,total_payable_amount int,stutas varchar(20),pannding_level int);
+
+
+
+
+

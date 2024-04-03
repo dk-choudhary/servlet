@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Account Opening Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  label {
+    width: calc(50% - 5px); /* Adjusted width to fit multiple inputs in one line */
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: calc(50% - 5px); /* Adjusted width to fit multiple inputs in one line */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  input[type="submit"],
+  input[type="button"] {
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px; /* Added margin to create space between buttons */
+  }
+
+  .form-group input[type="submit"]{
+    width: calc(50% - 5px); /* Reset width for submit button */
+  }
+  .form-group select {
+    width: calc(50% - 5px); /* Adjusted width to fit select input in one line */
+  }
+  .required::before {
+    content: '*';
+    color: red;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>NBOI Bank Account Opening Form</h2>
+  <form action="basicDeatils" method="post">
+    <div class="form-group">
+      <label for="firstName" class="required">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+      <label for="lastName" class="required">Last Name:</label>
+      <input type="text" id="lastName" name="lastName">
+    </div>
+    <div class="form-group">
+      <label for="fatherName" class="required">Father's Name:</label>
+      <input type="text" id="fatherName" name="fatherName" required>
+      <label for="motherName" class="required">Mother's Name:</label>
+      <input type="text" id="motherName" name="motherName" required>
+    </div>
+    <div class="form-group">
+      <label for="dob" class="required">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+      <label for="email" class="required">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="mobile" class="required">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+      <label for="aadhar" class="required">Aadhar Number:</label>
+      <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" required>
+    </div>
+    <div class="form-group">
+      <label for="pan" class="required">PAN Number:</label>
+      <input type="text" id="pan" name="pan" required>
+      <label for="accountType" class="required">Account Type:</label>
+      <select id="accountType" name="accountType" required>
+        <option value="saving">Saving Account</option>
+        <option value="current">Current Account</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Save & Next">
+      <input type="button" value="Back" onclick="openNewPage()" >
+    </div>
+  </form>
+</div>
+<script>
+  function openNewPage() {
+    window.location.href = "BankLoginPage.html";
+  }
+</script>
+</body>
+</html>
+``

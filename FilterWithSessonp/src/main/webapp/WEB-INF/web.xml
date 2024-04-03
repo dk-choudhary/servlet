@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <web-app>
+  
+  
+  
+  <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.filtersesson.FilterWithSesson1</servlet-class>  
+  </servlet>
+  
+  
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/filterwithsesson</url-pattern>  
+  </servlet-mapping>
+ <filter>
+		<filter-name>firstfilter</filter-name>
+		<filter-class>com.filtersesson.MyFilterWithSesson</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>firstfilter</filter-name>
+		<url-pattern>/filterwithsesson</url-pattern>
+	</filter-mapping>
+  
+  
+</web-app>

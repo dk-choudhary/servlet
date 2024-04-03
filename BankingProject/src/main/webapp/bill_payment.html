@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #004080;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bill Payment</h1>
+    <form action="Bill_Payment" method="post">
+        <label for="bill_type">Bill Type</label>
+        <select id="bill_type" name="bill_type" required>
+            <option value="electricity">Electricity Bill</option>
+            <option value="water">Water Bill</option>
+            <option value="gas">Gas Bill</option>
+            <!-- Add more bill types if needed -->
+        </select>
+
+        <label for="bill_amount">Bill Amount</label>
+        <input type="number" id="bill_amount" name="bill_amount" placeholder="Bill Amount" required>
+
+        <label for="account_number">Account Number</label>
+        <input type="text" id="account_number" name="account_number" placeholder="Account Number" required>
+
+        <input type="submit" value="Pay">
+    </form>
+</body>
+
+</html>

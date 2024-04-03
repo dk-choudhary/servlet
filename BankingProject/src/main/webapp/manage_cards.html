@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #004080;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Manage Cards</h1>
+    <form action="Manage_Cards" method="post">
+        <label for="card_number">Card Number</label>
+        <input type="text" id="card_number" name="card_number" placeholder="Card Number" required>
+
+        <label for="card_type">Card Type</label>
+        <select id="card_type" name="card_type" required>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <!-- Add more card types if needed -->
+        </select>
+
+        <label for="expiry_date">Expiry Date</label>
+        <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required>
+
+        <input type="submit" value="Save">
+    </form>
+</body>
+
+</html>

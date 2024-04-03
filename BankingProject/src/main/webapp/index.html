@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .face {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .eyes {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .eyes.left {
+            transform: translate(-75%, -50%);
+        }
+        .eyes.right {
+            transform: translate(25%, -50%);
+        }
+        .mouth {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 60px;
+            border-bottom: 4px solid #333;
+            border-radius: 0 0 80px 80px;
+        }
+        .cheeks {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: #f0b7a4;
+            border-radius: 50%;
+        }
+        .cheeks.left {
+            left: 25%;
+            transform: translateY(-100%);
+        }
+        .cheeks.right {
+            right: 25%;
+            transform: translateY(-100%);
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <h1> </h1>
+</head>
+<body>
+	
+    <div class="container">
+        <div class="face">
+            <div class="eyes left"></div>
+            <div class="eyes right"></div>
+            <div class="mouth"></div>
+            <div class="cheeks left"></div>
+            <div class="cheeks right"></div>
+        </div>
+        <h1>Bank Of India</h1>
+        <p>Your Trusted Financial Partner</p>
+        <div class="form-container">
+            <form action="login" method="post">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="register.html">Register Here</a></p>
+        </div>
+    </div>
+</body>
+</html>
